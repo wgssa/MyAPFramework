@@ -2,24 +2,22 @@ package tests;
 
 import org.junit.Test;
 
-public class LoginTest extends SampleTest {
+public class LoginTest2 extends SampleTest {
 
     @Test
-    public void LoginTest (){
+    public void LoginTest2 (){
         // 1. Открываем главную страницу:
         user.mainPage.openMainPage();
         // 2. Нажимаем кнпоку сайн ин чтобы перейти на страницу логина:
         user.mainPage.clickOnSignInButton();
-        // 3. Вводим почту:
-        user.loginPage.fillEmailAddress(Helper.PropertiesHelper.INSTANCE.getProperties("email"));
+        // Пропускаем ввод почты:
         // 4. Вводим пароль:
         user.loginPage.fillPassword(Helper.PropertiesHelper.INSTANCE.getProperties("password"));
         // 5. Нажимаем кнопку сайн ин чтобы войти в мой аккаунт:
         user.loginPage.clickSignInLogin();
-        // 6. Проверяем вошли ли через имя пользователя:
-        user.myAccountPage.myAccountNameIsTrue(Helper.PropertiesHelper.INSTANCE.getProperties("myAccountName"));
-        // 7. Проверяем есть ли кнопка сан аут:
-        user.myAccountPage.signOutButtonIsVisible();
-        user.myAccountPage.signOutButtonIsClickable();
+        // 5. Проверяем наличие алерта:
+        user.loginPage.allertMessageIsDisplayed();
+        // 6. Проверяем правильность сообщения в алерте:
+        user.loginPage.allertMessageIsCorrect(Helper.PropertiesHelper.INSTANCE.getProperties("allertEmail"));
     }
 }

@@ -1,6 +1,7 @@
 package pages;
 
 import net.thucydides.core.annotations.DefaultUrl;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,6 +19,9 @@ public class LoginPage extends BasePage {
 
     @FindBy (xpath = "//*[@id='SubmitLogin']/span/i")
     private WebElement SignInLogin;
+
+    @FindBy (xpath = "//div[@class='alert alert-danger']/ol/li")
+    private WebElement AllertMessage;
 
     //// Драйвер:
 
@@ -43,6 +47,14 @@ public class LoginPage extends BasePage {
     // Нажатие кнопки Sign In:
     public void clickSignInLogin(){
         element(SignInLogin).click();
+    }
+    // Отображение алерта:
+    public void allertMessageIsDisplayed(){
+        Assert.assertTrue(element(AllertMessage).isDisplayed());
+    }
+    // Сообщение в алерте правильное:
+    public void allertMessageIsCorrect(String message){
+        Assert.assertEquals(message, element(AllertMessage).getText());
     }
 
 }

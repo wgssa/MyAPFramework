@@ -2,6 +2,7 @@ package steps;
 
 import net.thucydides.core.steps.ScenarioSteps;
 import net.thucydides.core.annotations.Step;
+import org.junit.Assert;
 import pages.LoginPage;
 
 public class LoginSteps extends ScenarioSteps {
@@ -31,5 +32,14 @@ public class LoginSteps extends ScenarioSteps {
     public void clickSignInLogin(){
         onPage.clickSignInLogin();
     }
-
+    // Проверка наличия алерта:
+    @Step
+    public void allertMessageIsDisplayed(){
+        onPage.allertMessageIsDisplayed();
+    }
+    // Сообщение алерта правильное:
+    @Step
+    public void allertMessageIsCorrect(String message){
+        onPage.allertMessageIsCorrect(message);
+    }
 }
