@@ -15,7 +15,7 @@ public class Login1Test extends SampleTest {
         // 4. Вводим пароль:
         user.loginPage.fillPassword(Helper.PropertiesHelper.INSTANCE.getProperties("password"));
         // 5. Нажимаем кнопку сайн ин чтобы войти в мой аккаунт:
-        user.loginPage.clickSignInLogin();
+        user.loginPage.clickSubmitLoginButton();
         // 6. Проверяем вошли ли через имя пользователя:
         user.myAccountPage.myAccountNameIsTrue(Helper.PropertiesHelper.INSTANCE.getProperties("myAccountName"));
         // 7. Проверяем есть ли кнопка сан аут:

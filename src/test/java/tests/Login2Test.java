@@ -14,10 +14,10 @@ public class Login2Test extends SampleTest {
         // 4. Вводим пароль:
         user.loginPage.fillPassword(Helper.PropertiesHelper.INSTANCE.getProperties("password"));
         // 5. Нажимаем кнопку сайн ин чтобы войти в мой аккаунт:
-        user.loginPage.clickSignInLogin();
+        user.loginPage.clickSubmitLoginButton();
         // 5. Проверяем наличие алерта:
-        user.loginPage.allertMessageIsDisplayed();
+        user.loginPage.checkAllertMessageIsDisplayed();
         // 6. Проверяем правильность сообщения в алерте:
-        user.loginPage.allertMessageIsCorrect(Helper.PropertiesHelper.INSTANCE.getProperties("allertEmail"));
+        user.loginPage.checkAllertMessageIsCorrect(Helper.PropertiesHelper.INSTANCE.getProperties("allertEmail"));
     }
 }

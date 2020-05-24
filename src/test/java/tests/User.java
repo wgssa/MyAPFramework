@@ -1,9 +1,7 @@
 package tests;
 
 import net.thucydides.core.annotations.Steps;
-import steps.LoginSteps;
-import steps.MainSteps;
-import steps.MyAccountSteps;
+import steps.*;
 
 // Описываем пейджы, для удобства
 public class User {
@@ -18,4 +16,10 @@ public class User {
 
     @Steps
     public MyAccountSteps myAccountPage;
+
+    @Steps
+    public CategorySteps categoryPage;
+
+    @Steps
+    public ShopingCartSteps shopingCartPage;
 }

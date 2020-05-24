@@ -20,6 +20,9 @@ public class MainPage extends BasePage{
     // Указываем веб элемент и его название:
     private WebElement signInButton;
 
+    @FindBy(css = "a[title='Women']")
+    private WebElement womenTab;
+
     //// Дравер:
 
     // Создается автоматом после наследования бейз пейджа:
@@ -37,6 +40,11 @@ public class MainPage extends BasePage{
     // Нажатия кнопки указанного элемента:
     public void clickOnSignInButton() {
         element(signInButton).click();
+    }
+
+    // Нажатия на категорию дресес:
+    public void clickWomenTab(){
+        element(womenTab).click();
     }
 
 }

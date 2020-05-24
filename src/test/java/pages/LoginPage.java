@@ -18,10 +18,10 @@ public class LoginPage extends BasePage {
     private WebElement passField;
 
     @FindBy (xpath = "//*[@id='SubmitLogin']/span/i")
-    private WebElement SignInLogin;
+    private WebElement submitLoginButton;
 
     @FindBy (xpath = "//div[@class='alert alert-danger']/ol/li")
-    private WebElement AllertMessage;
+    private WebElement allertMessage;
 
     //// Драйвер:
 
@@ -45,16 +45,16 @@ public class LoginPage extends BasePage {
         element(passField).sendKeys(password);
     }
     // Нажатие кнопки Sign In:
-    public void clickSignInLogin(){
-        element(SignInLogin).click();
+    public void clickSubmitLoginButton(){
+        element(submitLoginButton).click();
     }
     // Отображение алерта:
-    public void allertMessageIsDisplayed(){
-        Assert.assertTrue(element(AllertMessage).isDisplayed());
+    public void checkAllertMessageIsDisplayed(){
+        Assert.assertTrue(element(allertMessage).isDisplayed());
     }
     // Сообщение в алерте правильное:
-    public void allertMessageIsCorrect(String message){
-        Assert.assertEquals(message, element(AllertMessage).getText());
+    public void checkAllertMessageIsCorrect(String message){
+        Assert.assertEquals(message, element(allertMessage).getText());
     }
 
 }

@@ -14,10 +14,10 @@ public class Login3Test extends SampleTest {
         user.loginPage.fillEmailAddress(Helper.PropertiesHelper.INSTANCE.getProperties("email"));
         // Пропускаем ввод пароля
         // 4. Нажимаем кнопку сайн ин чтобы войти в мой аккаунт:
-        user.loginPage.clickSignInLogin();
+        user.loginPage.clickSubmitLoginButton();
         // 5. Проверяем наличие алерта:
-        user.loginPage.allertMessageIsDisplayed();
+        user.loginPage.checkAllertMessageIsDisplayed();
         // 6. Проверяем правильность сообщения в алерте:
-        user.loginPage.allertMessageIsCorrect(Helper.PropertiesHelper.INSTANCE.getProperties("allertPassword"));
+        user.loginPage.checkAllertMessageIsCorrect(Helper.PropertiesHelper.INSTANCE.getProperties("allertPassword"));
     }
 }
