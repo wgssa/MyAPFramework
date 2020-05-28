@@ -28,8 +28,17 @@ public class LoginSteps extends ScenarioSteps {
     }
     // Нажатие кнопки сайн ин:
     @Step
-    public void clickSignInLogin(){
-        onPage.clickSignInLogin();
+    public void clickSubmitLoginButton(){
+        onPage.clickSubmitLoginButton();
     }
-
+    // Проверка наличия алерта:
+    @Step
+    public void checkAllertMessageIsDisplayed(){
+        onPage.checkAllertMessageIsDisplayed();
+    }
+    // Сообщение алерта правильное:
+    @Step
+    public void checkAllertMessageIsCorrect(String message){
+        onPage.checkAllertMessageIsCorrect(message);
+    }
 }

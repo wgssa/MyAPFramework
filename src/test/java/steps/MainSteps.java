@@ -22,4 +22,9 @@ public class MainSteps extends ScenarioSteps {
         onPage.openMainPage();
     }
 
+    @Step
+    public void clickOnWomenTab(){
+        onPage.clickWomenTab();
+    }
+
 }
