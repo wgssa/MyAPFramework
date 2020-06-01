@@ -18,4 +18,9 @@ public class CategorySteps extends ScenarioSteps {
     public void clickCheckoutButton(){
         onPage.clickCheckoutButton();
     }
+
+    @Step
+    public void clickContinueShopingButton(){
+        onPage.clickContinueShopingButton();
+    }
 }

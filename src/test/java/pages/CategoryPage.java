@@ -18,6 +18,9 @@ public class CategoryPage extends BasePage {
     @FindBy(css = "a[title='Proceed to checkout']")
     private WebElement checkoutButton;
 
+    @FindBy(xpath = "//*[@id='layer_cart']/div[1]/div[2]/div[4]/span/span")
+    private WebElement continueShopingButton;
+
     //// Драйвер:
 
     public CategoryPage (WebDriver driver) {
@@ -35,17 +38,31 @@ public class CategoryPage extends BasePage {
         return addToCartButtons;
     }
 
-    // Добавления необходимого количества товаров по нажатию кнопки:
-    public void clickAddToCartButton(int addProductCount){
-        for (int i = 0; i < addProductCount;i++) {
-            withAction().moveToElement(getColumnItemsList().get(i)).perform();
-            getAddToCartButtonsList().get(i).click();
-        }
-    }
 
     // Нажатия кнопки чекаут:
     public void clickCheckoutButton(){
         element(checkoutButton).click();
     }
+
+    // Нажатия кнопки продолжить покупки:
+    public void clickContinueShopingButton(){
+        element(continueShopingButton).click();
+    }
+
+
+
+    // Добавления необходимого количества товаров по нажатию кнопки:
+    public void clickAddToCartButton(int addProductCount){
+        for (int i = 0; i < addProductCount;i++) {
+            withAction().moveToElement(getColumnItemsList().get(i)).perform();
+            getAddToCartButtonsList().get(i).click();
+            if(i<addProductCount){
+                // TODO:
+                clickContinueShopingButton();
+            }
+        }
+    }
+
+
 
 }
