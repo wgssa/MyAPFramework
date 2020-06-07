@@ -2,10 +2,10 @@ package tests;
 
 import org.junit.Test;
 
-public class Login1Test extends SampleTest {
+public class LoginWithValidDataTest extends SampleTest {
 
     @Test
-    public void Login1Test (){
+    public void LoginWithValidDataTest() {
         // 1. Открываем главную страницу:
         user.mainPage.openMainPage();
         // 2. Нажимаем кнпоку сайн ин чтобы перейти на страницу логина:

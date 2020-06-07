@@ -10,17 +10,17 @@ public class CategorySteps extends ScenarioSteps {
     private CategoryPage onPage;
 
     @Step
-    public void clickAddToCartButton(int addProductCount){
-        onPage.clickAddToCartButton(addProductCount);
+    public void addItemsInShopingCart(int addProductCount) {
+        onPage.addItemsInShopingCart(addProductCount);
     }
 
     @Step
-    public void clickCheckoutButton(){
+    public void clickCheckoutButton() {
         onPage.clickCheckoutButton();
     }
 
     @Step
-    public void clickContinueShopingButton(){
+    public void clickContinueShopingButton() {
         onPage.clickContinueShopingButton();
     }
 }

@@ -13,7 +13,7 @@ public class MyAccountPage extends BasePage {
     //// Локаторы:
 
     // Имя аккаунта:
-    @FindBy (xpath = "//div[@class='header_user_info']/a/span")
+    @FindBy(xpath = "//div[@class='header_user_info']/a/span")
     private WebElement myAccountName;
     //Кнопка сан аут:
     @FindBy(xpath = "//div/a[@class='logout']")
@@ -21,7 +21,7 @@ public class MyAccountPage extends BasePage {
 
     //// Драйвер:
 
-    public MyAccountPage (WebDriver driver) {
+    public MyAccountPage(WebDriver driver) {
         super(driver);
     }
 
@@ -33,16 +33,18 @@ public class MyAccountPage extends BasePage {
     }
 
     //Проверяем правдивость кнопки аккаунта имени Аккаунта:
-    public void myAccountNameIsTrue(String accountName){
-        Assert.assertEquals(accountName,element(myAccountName).getText());
+    public void myAccountNameIsTrue(String accountName) {
+        Assert.assertEquals(accountName, element(myAccountName).getText());
     }
+
     //Проверяем кнопку сайн аут:
     // Кнопка видна:
-    public void signOutButtonIsVisible(){
+    public void signOutButtonIsVisible() {
         Assert.assertTrue(element(signOutButton).isVisible());
     }
+
     // На кнопку можно нажать
-    public void signOutButtonIsClickable(){
+    public void signOutButtonIsClickable() {
         Assert.assertTrue(element(signOutButton).isClickable());
     }
 

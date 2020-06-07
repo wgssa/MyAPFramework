@@ -2,10 +2,10 @@ package tests;
 
 import org.junit.Test;
 
-public class Login2Test extends SampleTest {
+public class LoginWithEmptyEmailFieldTest extends SampleTest {
 
     @Test
-    public void Login2Test (){
+    public void LoginWithEmptyEmailFieldTest() {
         // 1. Открываем главную страницу:
         user.mainPage.openMainPage();
         // 2. Нажимаем кнпоку сайн ин чтобы перейти на страницу логина:
