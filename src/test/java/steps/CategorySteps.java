@@ -6,7 +6,7 @@ import pages.CategoryPage;
 
 public class CategorySteps extends ScenarioSteps {
 
-    //Обьявляем категори пейдж
+    //Обьявляем категори пейдж:
     private CategoryPage onPage;
 
     @Step
