@@ -21,7 +21,7 @@ public class CheckoutTest extends SampleTest {
         // 6. Открываем страницу категории вомен
         user.mainPage.clickOnWomenTab();
         // 7. Добавляем товар:
-        user.categoryPage.clickAddToCartButton(1);
+        user.categoryPage.addItemsInShopingCart(1);
         // 8. Нажимаем кнопку продолжить чекаут:
         user.categoryPage.clickCheckoutButton();
         // 9. Проверяем находимся ли мы на шаге 1:
