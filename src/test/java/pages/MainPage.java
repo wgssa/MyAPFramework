@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 @DefaultUrl("http://automationpractice.com/index.php")
 
 // Наследуем бейз пейдж:
-public class MainPage extends BasePage{
+public class MainPage extends BasePage {
 
     //// Локаторы:
 
@@ -43,7 +43,7 @@ public class MainPage extends BasePage{
     }
 
     // Нажатия на категорию дресес:
-    public void clickWomenTab(){
+    public void clickWomenTab() {
         element(womenTab).click();
     }
 

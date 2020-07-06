@@ -16,16 +16,15 @@ import org.openqa.selenium.WebDriver;
 public abstract class SampleTest {
 
     // Аннотация:
+    // чтобы серенити мог добавить шаги в репорт при его генерации:
+    @Steps
+    public User user;
+    // Аннотация:
     // Указываем дравер, в данном случае хром
     // уникальная сессия/?
     @Managed(driver = "chrome", uniqueSession = true)
 
     private WebDriver driver;
-
-    // Аннотация:
-    // чтобы серенити мог добавить шаги в репорт при его генерации:
-    @Steps
-    public User user;
 
     // Аннотация:
     // что мы будем делать после завершения теста

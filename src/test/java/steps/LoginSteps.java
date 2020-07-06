@@ -1,7 +1,7 @@
 package steps;
 
-import net.thucydides.core.steps.ScenarioSteps;
 import net.thucydides.core.annotations.Step;
+import net.thucydides.core.steps.ScenarioSteps;
 import pages.LoginPage;
 
 public class LoginSteps extends ScenarioSteps {

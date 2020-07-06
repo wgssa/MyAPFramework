@@ -8,16 +8,19 @@ public class MyAccountSteps extends ScenarioSteps {
 
     // Обьявляем страницу мой аккаунт:
     private MyAccountPage onPage;
+
     // Сравниваем имя аккаунта:
     @Step
     public void myAccountNameIsTrue(String accountName) {
         onPage.myAccountNameIsTrue(accountName);
     }
+
     // Ищем кнопку сайн аут:
     @Step
     public void signOutButtonIsVisible() {
         onPage.signOutButtonIsVisible();
     }
+
     @Step
     public void signOutButtonIsClickable() {
         onPage.signOutButtonIsClickable();
